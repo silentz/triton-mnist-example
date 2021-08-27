@@ -2,7 +2,7 @@
 
 MNIST model inference example using
 [NVIDIA Triton inference server](https://developer.nvidia.com/nvidia-triton-inference-server)
-made as simple as possible. Example is implemented in Python programming languages. 
+made as simple as possible. Example is implemented in Python programming language.
 
 ### Layout
 
@@ -30,9 +30,8 @@ docker run -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/repository:/models nvcr.i
 
 ## Triton client
 
-Python triton image client. Only available on linux due
-to triton client library limitations. Following steps are required
-to run model:
+Only available on linux due to triton client library limitations.
+Following steps are required to run model:
 
 1. Install dependencies:
 ```bash
