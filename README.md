@@ -28,7 +28,7 @@ To run triton inference server, do following:
 docker run -p8000:8000 -p8001:8001 -p8002:8002 -v $PWD/repository:/models nvcr.io/nvidia/tritonserver:21.07-py3 tritonserver --model-repository=/models
 ```
 
-## Triton client
+### Triton client
 
 Only available on linux due to triton client library limitations.
 Following steps are required to run model:
