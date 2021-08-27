@@ -8,7 +8,8 @@ made as simple as possible. Example is implemented in Python programming languag
 
 ```
 ├── client/
-│   └── client.py           # Python client
+│   ├── client.py           # Python client
+│   └── samples/            # Sample images
 ├── model/
 │   ├── train.py            # Model training pipeline
 │   └── requirements.txt    # Model requirements
@@ -42,5 +43,6 @@ pip3 install opencv-python
 
 2. Run client:
 ```bash
-python3 client.py sample/0.png --url localhost:8000
+cd client
+python3 client.py samples/0.png --url localhost:8000
 ```
