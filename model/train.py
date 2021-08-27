@@ -44,6 +44,7 @@ class ScriptModel(torch.nn.Module):
         self.model = model
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
+        X = torch.unsqueeze(X, dim=0)
         X = self.model(X)
         X = torch.exp(X)
         return X
@@ -108,7 +109,7 @@ def main():
     script_model = ScriptModel(model)
     script_model.eval()
 
-    inputs = torch.randn(1, 1, 28, 28)
+    inputs = torch.randn(1, 28, 28)
     jit_model = torch.jit.trace(script_model, inputs)
     jit_model.save('model.pt')
 
