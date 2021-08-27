@@ -23,3 +23,8 @@ pip install -r requirements.txt
 ```
 python train.py
 ```
+
+5. Place traced model in model repository:
+```
+cp model.pt ../repository/mnist/1/model.pt
+```
