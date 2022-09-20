@@ -111,6 +111,7 @@ def main():
 
     inputs = torch.randn(1, 28, 28)
     jit_model = torch.jit.trace(script_model, inputs)
+    torch.onnx.export(script_model, inputs, "model.onnx", verbose=True, input_names=['input_0'], output_names=['output_0'])
     jit_model.save('model.pt')
 
 
